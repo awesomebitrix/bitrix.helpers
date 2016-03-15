@@ -1,0 +1,21 @@
+{
+    "name": "falur/bitrix-helpers",
+    "type": "library",
+    "description": "Bitrix helpers",
+    "keywords": ["bitrix", "helpers"],
+    "license": "GNU General Public License",
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "authors": [
+        {
+            "name": "Ildar Enakaev",
+            "email": "ienakaev@ya.ru"
+        }
+    ],
+    "autoload": {
+        "files": [
+			"helpers.php"
+		]
+    }
+}
