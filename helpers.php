@@ -137,3 +137,25 @@ if (!function_exists('gUser')) {
         return $USER;
     }
 }
+
+if (!function_exists('inc')) {
+    /**
+     *
+     * @param string $path
+     * @param bollean $isTemplateInclude
+     */
+    function inc($path, $isTemplateInclude = false)
+    {
+        $fullPath = $isTemplateInclude ? SITE_TEMPLATE_PATH . '/' . $path : $path;
+
+        gApp()->IncludeComponent(
+            'bitrix:main.include',
+            '',
+            array(
+                'AREA_FILE_SHOW' => 'file',
+                'PATH' => SITE_DIR . $fullPath,
+                'EDIT_TEMPLATE' => ''
+            )
+        );
+    }
+}
